@@ -29,7 +29,7 @@ public class ScoreService {
 	public MovieDTO saveScore(ScoreDTO dto) {
 		
 		User user = userRepository.findByEmail(dto.getEmail());
-		if (user ==null) {
+		if (user == null) {
 			user = new User();
 			user.setEmail(dto.getEmail());
 			user = userRepository.saveAndFlush(user);
